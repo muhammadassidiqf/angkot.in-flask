@@ -22,7 +22,7 @@ $('#btn-cari').on('click', function (e) {
     $("#cari").css('display', 'block')
 })
 $(document).ready(function () {
-    $('#table-wisata, #table-sumber').DataTable({
+    $('#table-wisata').DataTable({
         "pageLength": 5,
         "lengthMenu": [
             [5, 10, 20, -1],
@@ -30,6 +30,20 @@ $(document).ready(function () {
         ]
     });
     $('.input-cari-trayek').select2();
+
+});
+$(document).ready(function () {
+    $('#table-sumber').DataTable({
+        "pageLength": 5,
+        "lengthMenu": [
+            [5, 10, 20, -1],
+            ['5 rows', '10 rows', '20 rows', 'Show all']
+        ]
+    });
+});
+$('#upload-icon').on('click', function (e) {
+    e.preventDefault()
+    $('#hasil').toggleClass('hide')
 });
 
 

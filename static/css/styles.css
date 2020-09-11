@@ -214,10 +214,10 @@ ul.menu-nav-mobile-link li{
     margin-bottom: 0;
     font-weight: 500;
 }
-.upload-icon{
+.upload-icon-container{
     margin-bottom: 15px;
 }
-.upload-icon button{
+.upload-icon-container button{
     background: transparent;
 }
 
@@ -252,7 +252,7 @@ ul.menu-nav-mobile-link li{
     margin-bottom: 18px;
 }
 
-#hasil, #rute{
+#hasil{
     background-color: #ffffff;
     padding: 40px 10px; 
     -webkit-box-shadow: 0px 0px 5px 0px rgba(184,184,184,1);
@@ -260,7 +260,9 @@ ul.menu-nav-mobile-link li{
     box-shadow: 0px 0px 5px 0px rgba(184,184,184,1);
     margin: 20px 0;
 }
-
+.hide{
+  display: none;
+}
 .info-angkot-left ul, .info-angkot-right ul{
     list-style-type: none;
 }
@@ -377,9 +379,13 @@ table {
   .select:before {
     display: none;
   }
+  .page-item.active .page-link{
+    z-index: 1 !important;
+  }
   
   .detail {
-    background-color: #BD2A4E;
+    background-color: #ffffff;
+    color: #000000;
     width: 100%;
     height: 100%;
     padding: 40px 0;
@@ -401,6 +407,7 @@ table {
     -ms-transform: translateX(0);
     -webkit-transform: translateX(0);
     transform: translateX(0);
+    z-index: 5;
   }
   
   .detail-container {
@@ -415,24 +422,25 @@ table {
   }
   
   dt {
-    font-size: 2.2rem;
-    font-weight: 300;
+    font-size: 25px;
+    font-weight: 700;
   }
   
   dd {
     margin: 0 0 40px 0;
-    font-size: 1.8rem;
+    font-size: 20px;
+    color: #45BF55;
     padding-bottom: 5px;
-    border-bottom: 1px solid #ac2647;
-    box-shadow: 0 1px 0 #c52c51;
+    border-bottom: 1px solid #45BF55;
+    box-shadow: 0 1px 0 #45BF55;
   }
   
   .close {
     background: none;
-    padding: 18px;
-    color: #fff;
-    font-weight: 300;
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: #45BF55;
+    font-weight: 500;
+    padding: 10px !important;
+    border: 1px solid white;
     border-radius: 4px;
     line-height: 1;
     font-size: 1.8rem;
@@ -445,8 +453,9 @@ table {
     transition: border 0.3s linear;
   }
   .close:hover, .close:focus {
-    background-color: #a82545;
-    border: 1px solid #a82545;
+    background-color: #45BF55;
+    border: 1px solid #45BF55;
+    color: #ffffff;
   }
   
   @media (min-width: 460px) {

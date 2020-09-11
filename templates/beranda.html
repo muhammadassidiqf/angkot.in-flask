@@ -24,10 +24,10 @@
                 </div>
                 <div id="menu">
                     <ul class="menu-nav">
-                        <li class="active"><a href="{{ url_for('index') }}">Beranda</a></li>
-                        <li><a href="{{ url_for('tentang') }}">Tentang</a></li>
-                        <li><a href="{{ url_for('kontak') }}">Kontak</a></li>
-                        <li><a href="{{ url_for('sumber') }}">Sumber</a></li>
+                        <li class="active"><a href="beranda.html">Beranda</a></li>
+                        <li><a href="tentang.html">Tentang</a></li>
+                        <li><a href="kontak.html">Kontak</a></li>
+                        <li><a href="sumber.html">Sumber</a></li>
                     </ul>
                     <div class="nav-btn">
                         <div class="nav-btn-icon">
@@ -39,10 +39,10 @@
                             <i class="fas fa-window-close"></i>
                         </div>
                         <ul class="menu-nav-mobile-link">
-                            <li class="active"><a href="{{ url_for('index') }}">Beranda</a></li>
-                            <li><a href="{{ url_for('tentang') }}">Tentang</a></li>
-                            <li><a href="{{ url_for('kontak') }}">Kontak</a></li>
-                            <li><a href="{{ url_for('sumber') }}">Sumber</a></li>
+                            <li class="active"><a href="beranda.html">Beranda</a></li>
+                            <li><a href="tentang.html">Tentang</a></li>
+                            <li><a href="kontak.html">Kontak</a></li>
+                            <li><a href="sumber.html">Sumber</a></li>
                         </ul>
                     </div>
                 </div>
@@ -66,8 +66,8 @@
                             </div>
                             <div class="content-search-form">
                                 <div id="unggah">
-                                    <div class="upload-icon">
-                                        <button style="border: transparent;">
+                                    <div class="upload-icon-container">
+                                        <button id="upload-icon" style="border: transparent;">
                                             <i class="fas fa-cloud-upload-alt"></i>
                                         </button><br><br>
                                         <input type="file" class="button button-inactive upload">
@@ -93,11 +93,11 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <img src="{{ url_for('static',filename='images/image.png')}}" class="img-homepage" alt="image">
+                        <img src="images/image.png" class="img-homepage" alt="image">
                     </div>
                 </div>
             </div>
-            <div id="hasil">
+            <div id="hasil" class="hide">
                 <div class="title">
                     <h3>Hasil Pencarian</h3>
                 </div>
@@ -144,236 +144,234 @@
                     </div>
                     <div class="col-md-6">
                         <div class="image-angkot">
-                            <img src="{{ url_for('static',filename='images/angkot-05.jpeg')}}" alt="">
+                            <img src="images/angkot-05.jpeg" alt="">
                             <h3 class="text-center pr-5">Foto Angkot 05</h3>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div id="rute">
-                <div class="title">
-                    <h3>Rute</h3>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="image-rute">
-                            <img src="{{ url_for('static',filename='images/maps.png')}}" class="img-fluid" alt="">
+                <div id="rute" class="mt-5">
+                    <div class="title">
+                        <h3>Rute</h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="image-rute">
+                                <img src="images/maps.png" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="rute-keluar">
+                                <h5>Rute Keluar</h5>
+                                <p>Terminal Cicaheum - Jl. Ahmad Yani - Jl. K.H. Hasan Mustafa - Jl. Pahlawan - Jl.
+                                    Brigjend
+                                    Katamso - Jl. Supratman - Jl. Diponegoro - Jl. Sulanjana - Jl. Taman Sari - Jl.
+                                    Cihampelas - Jl. Lamping - Jl. Cipaganti - Jl. Setiabudhi - Jl. Karang Sari - Jl.
+                                    Sukajadi - Jl. Setiabudhi - Terminal Ledeng</p>
+                            </div>
+                            <div class="rute-masuk">
+                                <h5>Rute Masuk</h5>
+                                <p>Terminal Ledeng - Jl. Setiabudhi - Jl. Cihampelas - Jl. Siliwangi - Jl. Sumur Bandung
+                                    -
+                                    Jl. Taman Sari - Jl. Sulanjana - Jl. Diponegoro - Jl. Aria Jipang - Jl. Surapati -
+                                    Jl.
+                                    Sentot Alibasya - Jl. Diponegoro - Jl. Supratman - Jl. Brigjend Katamso - Jl.
+                                    Pahlawan -
+                                    Jl. Cikutra - Jl. K.H. Hasan Mustafa - Jl. Ahmad Yani - Terminal Cicaheum</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="rute-keluar">
-                            <h5>Rute Keluar</h5>
-                            <p>Terminal Cicaheum - Jl. Ahmad Yani - Jl. K.H. Hasan Mustafa - Jl. Pahlawan - Jl. Brigjend
-                                Katamso - Jl. Supratman - Jl. Diponegoro - Jl. Sulanjana - Jl. Taman Sari - Jl.
-                                Cihampelas - Jl. Lamping - Jl. Cipaganti - Jl. Setiabudhi - Jl. Karang Sari - Jl.
-                                Sukajadi - Jl. Setiabudhi - Terminal Ledeng</p>
-                        </div>
-                        <div class="rute-masuk">
-                            <h5>Rute Masuk</h5>
-                            <p>Terminal Ledeng - Jl. Setiabudhi - Jl. Cihampelas - Jl. Siliwangi - Jl. Sumur Bandung -
-                                Jl. Taman Sari - Jl. Sulanjana - Jl. Diponegoro - Jl. Aria Jipang - Jl. Surapati - Jl.
-                                Sentot Alibasya - Jl. Diponegoro - Jl. Supratman - Jl. Brigjend Katamso - Jl. Pahlawan -
-                                Jl. Cikutra - Jl. K.H. Hasan Mustafa - Jl. Ahmad Yani - Terminal Cicaheum</p>
-                        </div>
+                    <div class="title mt-5">
+                        <h3>Wisata</h3>
                     </div>
-                </div>
-                <div class="title mt-5">
-                    <h3>Wisata</h3>
-                </div>
-                <div class="table-wisata table">
-                    <table id="table-wisata">
-                        <thead>
-                            <tr>
-                                <th>
+                    <div class="table-wisata table">
+                        <table id="table-wisata">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Nama Wisata
+                                    </th>
+                                    <th>
+                                        Alamat
+                                    </th>
+                                    <th>
+                                        Detail
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tfoot>
+                                <tr>
+                                    <th colspan="3">
+                                        Daftar Wisata
+                                    </th>
+                                </tr>
+                            </tfoot>
+                            <tbody>
+                                <tr>
+                                    <td data-title="Nama Wisata">
+                                        Griya Pahlawan
+                                    </td>
+                                    <td data-title="Alamat">
+                                        Jalan Pahlawan
+                                    </td>
+                                    <td class="select">
+                                        <a class="button-detail" href="#">
+                                            Select
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-title="Nama Wisata">
+                                        Gedung Sate
+                                    </td>
+                                    <td data-title="Alamat">
+                                        Jalan Diponegoro
+                                    </td>
+                                    <td class="select">
+                                        <a class="button-detail" href="#">
+                                            Select
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-title="Nama Wisata">
+                                        Gedung Sate
+                                    </td>
+                                    <td data-title="Alamat">
+                                        Jalan Diponegoro
+                                    </td>
+                                    <td class="select">
+                                        <a class="button-detail" href="#">
+                                            Select
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-title="Nama Wisata">
+                                        Gedung Sate
+                                    </td>
+                                    <td data-title="Alamat">
+                                        Jalan Diponegoro
+                                    </td>
+                                    <td class="select">
+                                        <a class="button-detail" href="#">
+                                            Select
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-title="Nama Wisata">
+                                        Gedung Sate
+                                    </td>
+                                    <td data-title="Alamat">
+                                        Jalan Diponegoro
+                                    </td>
+                                    <td class="select">
+                                        <a class="button-detail" href="#">
+                                            Select
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-title="Nama Wisata">
+                                        Gedung Sate
+                                    </td>
+                                    <td data-title="Alamat">
+                                        Jalan Diponegoro
+                                    </td>
+                                    <td class="select">
+                                        <a class="button-detail" href="#">
+                                            Select
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-title="Nama Wisata">
+                                        Gedung Sate
+                                    </td>
+                                    <td data-title="Alamat">
+                                        Jalan Diponegoro
+                                    </td>
+                                    <td class="select">
+                                        <a class="button-detail" href="#">
+                                            Select
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-title="Nama Wisata">
+                                        Gedung Sate
+                                    </td>
+                                    <td data-title="Alamat">
+                                        Jalan Diponegoro
+                                    </td>
+                                    <td class="select">
+                                        <a class="button-detail" href="#">
+                                            Select
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-title="Nama Wisata">
+                                        Gedung Sate
+                                    </td>
+                                    <td data-title="Alamat">
+                                        Jalan Diponegoro
+                                    </td>
+                                    <td class="select">
+                                        <a class="button-detail" href="#">
+                                            Select
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="detail">
+                        <div class="detail-container">
+                            <dl>
+                                <dt>
                                     Nama Wisata
-                                </th>
-                                <th>
+                                </dt>
+                                <dd>
+                                    Gedung Sate
+                                </dd>
+                                <dt>
                                     Alamat
-                                </th>
-                                <th>
-                                    Detail
-                                </th>
-                            </tr>
-                        </thead>
-                        <tfoot>
-                            <tr>
-                                <th colspan="3">
-                                    Daftar Wisata
-                                </th>
-                            </tr>
-                        </tfoot>
-                        <tbody>
-                            <tr>
-                                <td data-title="Nama Wisata">
-                                    Griya Pahlawan
-                                </td>
-                                <td data-title="Alamat">
-                                    Jalan Pahlawan
-                                </td>
-                                <td class="select">
-                                    <a class="button-detail" href="#">
-                                        Select
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td data-title="Nama Wisata">
-                                    Gedung Sate
-                                </td>
-                                <td data-title="Alamat">
+                                </dt>
+                                <dd>
                                     Jalan Diponegoro
-                                </td>
-                                <td class="select">
-                                    <a class="button-detail" href="#">
-                                        Select
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td data-title="Nama Wisata">
-                                    Gedung Sate
-                                </td>
-                                <td data-title="Alamat">
-                                    Jalan Diponegoro
-                                </td>
-                                <td class="select">
-                                    <a class="button-detail" href="#">
-                                        Select
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td data-title="Nama Wisata">
-                                    Gedung Sate
-                                </td>
-                                <td data-title="Alamat">
-                                    Jalan Diponegoro
-                                </td>
-                                <td class="select">
-                                    <a class="button-detail" href="#">
-                                        Select
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td data-title="Nama Wisata">
-                                    Gedung Sate
-                                </td>
-                                <td data-title="Alamat">
-                                    Jalan Diponegoro
-                                </td>
-                                <td class="select">
-                                    <a class="button-detail" href="#">
-                                        Select
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td data-title="Nama Wisata">
-                                    Gedung Sate
-                                </td>
-                                <td data-title="Alamat">
-                                    Jalan Diponegoro
-                                </td>
-                                <td class="select">
-                                    <a class="button-detail" href="#">
-                                        Select
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td data-title="Nama Wisata">
-                                    Gedung Sate
-                                </td>
-                                <td data-title="Alamat">
-                                    Jalan Diponegoro
-                                </td>
-                                <td class="select">
-                                    <a class="button-detail" href="#">
-                                        Select
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td data-title="Nama Wisata">
-                                    Gedung Sate
-                                </td>
-                                <td data-title="Alamat">
-                                    Jalan Diponegoro
-                                </td>
-                                <td class="select">
-                                    <a class="button-detail" href="#">
-                                        Select
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td data-title="Nama Wisata">
-                                    Gedung Sate
-                                </td>
-                                <td data-title="Alamat">
-                                    Jalan Diponegoro
-                                </td>
-                                <td class="select">
-                                    <a class="button-detail" href="#">
-                                        Select
-                                    </a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="detail">
-                    <div class="detail-container">
-                        <dl>
-                            <dt>
-                                Provider Name
-                            </dt>
-                            <dd>
-                                John Doe
-                            </dd>
-                            <dt>
-                                E-mail
-                            </dt>
-                            <dd>
-                                email@example.com
-                            </dd>
-                            <dt>
-                                City
-                            </dt>
-                            <dd>
-                                Detroit
-                            </dd>
-                            <dt>
-                                Phone-Number
-                            </dt>
-                            <dd>
-                                555-555-5555
-                            </dd>
-                            <dt>
-                                Last Update
-                            </dt>
-                            <dd>
-                                Jun 20 2014
-                            </dd>
-                            <dt>
-                                Notes
-                            </dt>
-                            <dd>
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat
-                                mattis eros. Nullam
-                                malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere
-                                a, pede.
-                            </dd>
-                        </dl>
-                    </div>
-                    <div class="detail-nav">
-                        <button class="close">
-                            Close
-                        </button>
+                                </dd>
+                                <dt>
+                                    Deskripsi
+                                </dt>
+                                <dd>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime doloremque aut nemo
+                                    error quis necessitatibus, dolorum vitae laborum quaerat ipsa explicabo quasi
+                                    eveniet eligendi ducimus corporis! Explicabo ex ab asperiores!
+                                </dd>
+                                <dt>
+                                    Nomor Telepon
+                                </dt>
+                                <dd>
+                                    022-555-5555
+                                </dd>
+                                <dt>
+                                    Last Update
+                                </dt>
+                                <dd>
+                                    Jun 20 2014
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="detail-nav">
+                            <button class="close">
+                                Close
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
     <div class="footer">
