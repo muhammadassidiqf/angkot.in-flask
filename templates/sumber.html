@@ -23,10 +23,10 @@
                 </div>
                 <div id="menu">
                     <ul class="menu-nav">
-                        <li><a href="beranda.html">Beranda</a></li>
-                        <li><a href="tentang.html">Tentang</a></li>
-                        <li><a href="kontak.html">Kontak</a></li>
-                        <li class="active"><a href="sumber.html">Sumber</a></li>
+                        <li><a href="{{ url_for('index') }}">Beranda</a></li>
+                        <li><a href="{{ url_for('tentang') }}">Tentang</a></li>
+                        <li><a href="{{ url_for('kontak') }}">Kontak</a></li>
+                        <li class="active"><a href="{{ url_for('sumber') }}">Sumber</a></li>
                     </ul>
                     <div class="nav-btn">
                         <div class="nav-btn-icon">
@@ -38,10 +38,10 @@
                             <i class="fas fa-window-close"></i>
                         </div>
                         <ul class="menu-nav-mobile-link">
-                            <li><a href="beranda.html">Beranda</a></li>
-                            <li><a href="tentang.html">Tentang</a></li>
-                            <li><a href="kontak.html">Kontak</a></li>
-                            <li class="active"><a href="sumber.html">Sumber</a></li>
+                            <li><a href="{{ url_for('index') }}">Beranda</a></li>
+                            <li><a href="{{ url_for('tentang') }}">Tentang</a></li>
+                            <li><a href="{{ url_for('kontak') }}">Kontak</a></li>
+                            <li class="active"><a href="{{ url_for('sumber') }}">Sumber</a></li>
                         </ul>
                     </div>
                 </div>
@@ -110,7 +110,7 @@
                             </div>
                             <div class="col-md-6">
                                 <h3 class="mb-3">Ini adalah sumber yang kami gunakan</h3>
-                                <img src="images/sumber-image.png" class="img-fluid" alt="">
+                                <img src="{{ url_for('static',filename='images/sumber-image.png') }}" class="img-fluid" alt="">
                             </div>
                         </div>
                     </div>
